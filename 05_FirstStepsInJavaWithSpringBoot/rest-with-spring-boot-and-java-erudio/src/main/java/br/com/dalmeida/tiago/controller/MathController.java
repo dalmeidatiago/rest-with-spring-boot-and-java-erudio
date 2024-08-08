@@ -23,7 +23,7 @@ public class MathController {
     
     @RequestMapping("/sum/{numberOne}/{numberTwo}")
     public Double sum(@PathVariable(value = "numberOne") String numberOne,
-    		@PathVariable(value = "numberTwo") String numberTwo) {
+    		@PathVariable(value = "numberTwo") String numberTwo) throws Exception {
     	
         return mathService.sum(numberOne, numberTwo);
     }
