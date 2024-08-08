@@ -1,12 +1,12 @@
 package br.com.dalmeida.tiago.model.dto;
 
-public class GreetingDTO {
+public class MathDTO {
 
 		private final long id;
 		private final String content;
 		
 		
-		public GreetingDTO(long id, String content) {
+		public MathDTO(long id, String content) {
 			this.id = id;
 			this.content = content;
 		}
