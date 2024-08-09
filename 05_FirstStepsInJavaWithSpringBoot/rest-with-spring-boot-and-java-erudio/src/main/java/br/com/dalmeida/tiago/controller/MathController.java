@@ -27,6 +27,38 @@ public class MathController {
     	
         return mathService.sum(numberOne, numberTwo);
     }
-
-	
+    
+    @RequestMapping("/subtraction/{numberOne}/{numberTwo}")
+    public Double subtraction(@PathVariable(value = "numberOne") String numberOne,
+    		@PathVariable(value = "numberTwo") String numberTwo) throws Exception {
+    	
+        return mathService.subtraction(numberOne, numberTwo);
+    }
+    
+    @RequestMapping("/multiplication/{numberOne}/{numberTwo}")
+    public Double multiplication(@PathVariable(value = "numberOne") String numberOne,
+    		@PathVariable(value = "numberTwo") String numberTwo) throws Exception {
+    	
+        return mathService.multiplication(numberOne, numberTwo);
+    }
+    
+    @RequestMapping("/division/{numberOne}/{numberTwo}")
+    public Double division(@PathVariable(value = "numberOne") String numberOne,
+    		@PathVariable(value = "numberTwo") String numberTwo) throws Exception {
+    	
+        return mathService.division(numberOne, numberTwo);
+    }
+    
+    @RequestMapping("/mean/{numberOne}/{numberTwo}")
+    public Double mean(@PathVariable(value = "numberOne") String numberOne,
+    		@PathVariable(value = "numberTwo") String numberTwo) throws Exception {
+    	
+        return mathService.mean(numberOne, numberTwo);
+    }
+    
+    @RequestMapping("/squareRoot/{number}")
+    public Double squareRoot(@PathVariable(value = "number") String number) throws Exception {
+    	
+        return mathService.squareRoot(number);
+    }
 }
