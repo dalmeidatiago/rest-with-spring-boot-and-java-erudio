@@ -1,22 +1,40 @@
 package br.com.dalmeida.tiago.model;
 
 import java.io.Serializable;
+
 import java.util.Objects;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "person") // --> Usa essa tag para os casos em que, no banco, o nome da entidade for diferente do nome na classe Java
 public class Person implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(name = "first_name", nullable = false, length = 40)
 	private String firstName;
+	
+	@Column(name = "last_name", nullable = false, length = 80)
 	private String lastName;
+	
+	@Column(nullable = false, length = 120)
 	private String address;
+	
+	@Column(nullable = false, length = 6)
 	private String gender;
 	
 	
-	public Person() {
-	}
-
+	public Person() {}
 
 	public Long getId() {
 		return id;

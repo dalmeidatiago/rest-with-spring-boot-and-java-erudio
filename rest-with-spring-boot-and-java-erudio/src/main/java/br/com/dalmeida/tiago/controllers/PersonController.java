@@ -1,4 +1,4 @@
-package br.com.dalmeida.tiago.controller;
+package br.com.dalmeida.tiago.controllers;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import br.com.dalmeida.tiago.model.Person;
-import br.com.dalmeida.tiago.service.PersonService;
+import br.com.dalmeida.tiago.services.PersonService;
 
 @RestController
 @RequestMapping("/person")

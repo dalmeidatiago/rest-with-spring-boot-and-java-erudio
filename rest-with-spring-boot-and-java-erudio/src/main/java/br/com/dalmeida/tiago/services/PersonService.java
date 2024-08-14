@@ -1,4 +1,4 @@
-package br.com.dalmeida.tiago.service;
+package br.com.dalmeida.tiago.services;
 
 import java.util.ArrayList;
 import java.util.List;
