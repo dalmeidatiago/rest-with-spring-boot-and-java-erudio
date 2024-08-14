@@ -12,6 +12,7 @@ import br.com.dalmeida.tiago.services.PersonService;
 @RequestMapping("/person")
 public class PersonController {
 	
+	
 	private final PersonService personService;
 
     PersonController(PersonService personService) {
@@ -19,13 +20,13 @@ public class PersonController {
     }
     
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person findById(@PathVariable(value = "id") String id) {
+    public Person findById(@PathVariable(value = "id") Long id) {
         return personService.findById(id);
     }
     
     @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Person> findByAll() {
-        return personService.findByAll();
+    public List<Person> findAll() {
+        return personService.findAll();
     }
     
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -39,7 +40,7 @@ public class PersonController {
     }
     
     @DeleteMapping(value = "/{id}")
-    public void deletePerson(@PathVariable(value = "id") String id) {
+    public void deletePerson(@PathVariable(value = "id") Long id) {
         personService.deletePerson(id);
     }
 }
